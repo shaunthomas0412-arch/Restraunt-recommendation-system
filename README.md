@@ -41,18 +41,12 @@ CDC project/
 
 ## 🛠️ Setup Instructions
 
-### 1. Clone or Download the Project
-```bash
-git clone https://github.com/Pushkar-lakshakar/Restaurant_recommender/tree/main.git
-cd Code
-```
-
-### 2. Install Dependencies
+### 1. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the App
+### 2. Run the App
 ```bash
 python app1.py
 ```
