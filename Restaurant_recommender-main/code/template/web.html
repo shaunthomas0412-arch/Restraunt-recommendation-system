@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Enter a Restaurant</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body>
+    <h2>Type the name of a restaurant you like:</h2>
+    <form action="/Keywords" method="POST">
+        <input type="text" name="restaurant" placeholder="e.g. Jalsa" required>
+
+        <br><br>
+
+        <label for="price">Select Price Range:</label>
+        <select name="price">
+            <option value="">Any</option>
+            <option value="Budget">Budget</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Expensive">Expensive</option>
+            <option value="Luxury">Luxury</option>
+        </select>
+
+        <br><br>
+
+        <label for="rating">Minimum Rating:</label>
+        <select name="rating">
+            <option value="">Any</option>
+            <option value="3.0">3.0 ★+</option>
+            <option value="3.5">3.5 ★+</option>
+            <option value="4.0">4.0 ★+</option>
+            <option value="4.5">4.5 ★+</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Get Recommendations</button>
+    </form>
+
+
+    <br>
+    <h2>Top Recommendations Similar to {{ name }}</h2>
+    {{ tables|safe }}
+    <br>
+    <a href="/web">Try another</a>
+    <script src="/static/main.js"></script>
+</body>
+
+</html>
